@@ -7,32 +7,31 @@
 body {
   background-color: #192b4d;
   color: #fafaf9;
-  font-family: "Coiny", sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   padding: 48px 64px;
 }
 
 /** MAIN LAYOUTS **/
 .container {
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 .header {
   margin-bottom: 40px;
-  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.fact-form {
-  background-color: #515963;
-  margin-bottom: 40px;
-  padding: 16px 40px;
-}
+
 .main {
   display: grid;
   grid-template-columns: 250px 1fr;
   gap: 48px;
+}
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
 }
 /* ELEMENTS */
 .logo {
@@ -63,22 +62,32 @@ h1 {
   margin-bottom: 16px;
   padding: 16px 24px;
   letter-spacing: -1px;
+  border-radius: 16px;
 
   display: flex;
   align-items: center;
   gap: 24px;
+}
+@media (max-width: 1200px) {
+  .fact {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12;
+  }
 }
 .tag {
   text-transform: uppercase;
   font-size: 14px;
   font-family: "Coiny", sans-serif;
   padding: 3px 10px 0px 10px;
+  border-radius: 100px;
 }
 
 .vote-buttons {
   margin-left: auto;
   flex-shrink: 0;
   display: flex;
+  gap: 16px;
 }
 .vote-buttons button {
   border: none;
@@ -90,7 +99,7 @@ h1 {
   font-family: inherit;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3;
 }
 .vote-buttons button:hover {
   background-color: #192b4d;
@@ -136,7 +145,7 @@ ul {
 .btn-large {
   font-size: 20px;
   padding: 20px 32px 17px;
-  border-radius: 25px 0;
+  border-radius: 100px;
 }
 .btn-all-categories {
   margin-bottom: 16px;
@@ -145,4 +154,50 @@ ul {
 .btn-category {
   width: 100%;
   background-image: none;
+}
+@media (max-width: 900px) {
+  .btn {
+    border-radius: 100px;
+  }
+}
+/** form */
+.fact-form {
+  background-color: #515963;
+  margin-bottom: 40px;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-radius: 16px;
+}
+
+.fact-form input,
+.fact-form select {
+  background-color: #728091;
+  border: none;
+  border-radius: 100px;
+  padding: 16px;
+  font-size: 18px;
+  color: inherit;
+  font-family: inherit;
+}
+.fact-form input::placeholder {
+  color: #8f9aa7;
+}
+.fact-form input:first-child {
+  flex-grow: 1;
+}
+.fact-form span {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@media (max-width: 1150px) {
+  .body {
+    padding: 32px 48px;
+  }
+  .fact-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
