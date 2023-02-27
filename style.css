@@ -52,7 +52,9 @@ h1 {
   line-height: 1;
   margin-top: 6px;
 }
-
+.category {
+  margin-bottom: 16px;
+}
 .fact {
   font-size: 20px;
   line-height: 1.4;
@@ -72,8 +74,26 @@ h1 {
   font-family: "Coiny", sans-serif;
   padding: 3px 10px 0px 10px;
 }
+
 .vote-buttons {
   margin-left: auto;
+  flex-shrink: 0;
+  display: flex;
+}
+.vote-buttons button {
+  border: none;
+  background-color: #728091;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 100px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.vote-buttons button:hover {
+  background-color: #192b4d;
 }
 ul {
   list-style: none;
@@ -88,4 +108,41 @@ ul {
 .source:hover,
 .source:active {
   color: #3b82f6;
+}
+
+.btn {
+  border: none;
+  font-family: "Coiny", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 16px 0 13px;
+  background-image: linear-gradient(
+    135deg,
+    #3b82f6,
+    #16a34a,
+    #ef4444,
+    #db2777,
+    #8b5cf6
+  );
+  color: inherit;
+  transition: 0.3s;
+  border-radius: 10px 100px / 120px;
+  cursor: pointer;
+}
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
+}
+.btn-large {
+  font-size: 20px;
+  padding: 20px 32px 17px;
+  border-radius: 25px 0;
+}
+.btn-all-categories {
+  margin-bottom: 16px;
+  width: 100%;
+}
+.btn-category {
+  width: 100%;
+  background-image: none;
 }
